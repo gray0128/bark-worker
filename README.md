@@ -71,3 +71,7 @@ Create a Worker and a KV Storage, bind KV Storage to Worker with name `database`
 - etc.
 
 Refer to [Tips](doc/tips.md)
+
+## 同步至cnb
+
+该仓库自动同步至 cnb.cool
