@@ -12,11 +12,21 @@ jobs:
         with:
           fetch-depth: 0
       
+      - name: Debug Secret
+        run: |
+          if [ -n "$SECRET" ]; then
+            echo "Secret length: ${#SECRET}"
+          else
+            echo "Secret is empty"
+          fi
+        env:
+          SECRET: ${{ secrets.GIT_PASSWORD }}
+
       - name: Sync to CNB Repository
         uses: docker://tencentcom/git-sync
         env:
           PLUGIN_TARGET_URL: "https://cnb.cool/ifilfy/bark-worker.git"
           PLUGIN_AUTH_TYPE: "https"
-          PLUGIN_USERNAME: "cnb"
+          PLUGIN_USERNAME: "ifilfy"
           PLUGIN_PASSWORD: ${{ secrets.GIT_PASSWORD }}
           PLUGIN_FORCE: "true"
