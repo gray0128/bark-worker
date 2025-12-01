@@ -71,3 +71,7 @@ Bark-Worker 是一个 [Bark-Server](https://github.com/Finb/bark-server) 在 Clo
 - etc.
 
 参考 [Tips](doc/tips.zh.md)
+
+## 同步至cnb
+
+该仓库自动同步至 cnb.cool
