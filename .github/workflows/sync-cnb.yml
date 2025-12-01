@@ -6,7 +6,6 @@ on: [push]
 jobs:
   sync:
     runs-on: ubuntu-latest
-    environment: production
     steps:
       - uses: actions/checkout@v3
         with:
@@ -17,5 +16,5 @@ jobs:
           PLUGIN_TARGET_URL: "https://cnb.cool/ifilfy/bark-worker.git"
           PLUGIN_AUTH_TYPE: "https"
           PLUGIN_USERNAME: "cnb"
-          PLUGIN_PASSWORD: 5hqXqk1088lb1XzCuls3uWCWVyD
+          PLUGIN_PASSWORD: ${{ secrets.GIT_PASSWORD }}
           PLUGIN_FORCE: "true"
